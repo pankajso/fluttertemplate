@@ -1,10 +1,10 @@
 /// Represents descriptive information about a Task
 
 enum TaskStatus{
-  init,
+  // init,
   start,
   pause,
-  stop,
+  // stop,
   complete
 }
 
