@@ -7,11 +7,13 @@ class TextSection extends StatelessWidget {
   // final String _body;
   final int _estimate;
   final int _actual;
+  final int _id;
+  final String _name;
   final TaskStatus _status;
 
   static const double _hPad = 16.0;
 
-  TextSection(this._estimate, this._actual, this._status);
+  TextSection(this._id, this._name, this._estimate, this._actual, this._status);
 
   @override
   Widget build(BuildContext context) {

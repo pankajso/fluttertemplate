@@ -17,17 +17,17 @@ class Home extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: data(_summaryList,_detailsList,_colorList),
+        // children: data(_summaryList,_detailsList,_colorList),
       ),
     );
   }
 }
 
-List<Widget> data(_summaryList,_detailsList,_colorList) {
-    List<Widget> widgetList = List();
-    widgetList.add(ImageBanner('assets/images/1.jpg'));
-    for (int i = 0; i < _colorList.length; i++) {
-      widgetList.add(TextSection(_summaryList[i],_detailsList[i], _colorList[i]));
-    }
-    return widgetList; 
-  }
+// List<Widget> data(_summaryList,_detailsList,_colorList) {
+//     List<Widget> widgetList = List();
+//     widgetList.add(ImageBanner('assets/images/1.jpg'));
+//     for (int i = 0; i < _colorList.length; i++) {
+//       widgetList.add(TextSection(_summaryList[i],_detailsList[i], _colorList[i]));
+//     }
+//     return widgetList; 
+//   }

@@ -6,9 +6,7 @@ import 'image_banner.dart';
 
 class TaskView extends StatelessWidget {
   final tasks = Task.fetchAll();
-  final task = Task('Task1', 1, [
-        TaskDetail(30, 0, TaskStatus.init), 
-      ]);
+  
   //  Task("Task1", 1, TaskDetail([30,0, TaskStatus.init]));
   // final task = tasks.first;
   // final List _colorList = [Colors.red, Colors.blue, Colors.green];
@@ -20,20 +18,20 @@ class TaskView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(task.name),
+        title: Text(tasks.username),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           ImageBanner('assets/images/1.jpg'),
-        ]..addAll(textSections(task)) ,
+        ]..addAll(textSections(tasks)) ,
       ),
     );
   }
   List<Widget> textSections(Task task) {
     return task.taskdetails
-        .map((taskdetails) => TextSection(taskdetails.estimate, taskdetails.actual, taskdetails.status))
+        .map((details) => TextSection(details.id, details.name, details.estimate, details.actual, details.status))
         .toList();
   }
 

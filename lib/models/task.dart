@@ -2,20 +2,16 @@ import './task_detail.dart';
 
 /// Represents a task user have.
 class Task {
-  final String name;
-  final int id;
+  final String username;
+  final int currentActiveid;
   final List<TaskDetail> taskdetails;
 
-  Task(this.name, this.id, this.taskdetails);
+  Task(this.username, this.currentActiveid, this.taskdetails);
 
-  static List<Task> fetchAll() {
-    return [
-      Task('Task1', 1, [
-        TaskDetail(30, 0, TaskStatus.init),  TaskDetail(40, 10, TaskStatus.pause)
-      ]),
-      Task('Task2', 2, [
-        TaskDetail(30, 0, TaskStatus.init)
-      ]),
-    ];
+  static Task fetchAll() {
+    return 
+      Task('User1', 2, [
+        TaskDetail(1, "Task 1", 30, 0, TaskStatus.init),  TaskDetail(2, "Task 2",40, 10, TaskStatus.pause)
+      ]);
   }
 }
