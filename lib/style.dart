@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 const LargeTextSize = 26.0;
 const MediumTextSize = 20.0;
 const BodyTextSize = 16.0;
+const Color TextColorLight = Colors.white;
+const DefaultPaddingHorizontal = 12.0;
 
 const String FontNameDefault = 'Karla';
 
