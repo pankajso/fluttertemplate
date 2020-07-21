@@ -10,10 +10,10 @@ enum TaskStatus{
 
 class TaskDetail {
   final int id;
-  final String name;
-  final int estimate;
-  final int actual;
-  final TaskStatus status;
+  String name;
+  int estimate;
+  int actual;
+  TaskStatus status;
 
   TaskDetail(this.id, this.name, this.estimate, this.actual, this.status);
 }

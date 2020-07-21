@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
           textTheme: TextTheme(
             headline6: TitleTextStyle,
             bodyText2: Body1TextStyle,
-          )),
+          ),
+        ),
     );
   }
 }

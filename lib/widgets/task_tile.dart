@@ -29,8 +29,18 @@ class TaskTile extends StatelessWidget {
                 title: Text(
                   task.taskdetails[index].name,
                 ),
+                trailing: IconButton(
+                      icon: Icon(
+                        Icons.delete,
+                        color: Colors.lightGreen,
+                      ),
+                      onPressed: () {
+                        // deleteTask(documentSnapshot.documentID);
+                      },
+                    ),
               ),
               color: toColor(task.taskdetails[index].status),
+              
             ),
             Text(
               "Estimated: " + task.taskdetails[index].estimate.toString(),
